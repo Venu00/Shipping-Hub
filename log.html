@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="th.jpg" type="image/jpg">
+    <title>Shipping Website - Login</title>
+    <style>
+        /* Styles from the first login box */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            width: 300px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0069d9;
+        }
+        
+        /* Styles for the combined login box */
+        .background-image {
+            background-image: url('https://hqew1mysai03b2c.blob.core.windows.net/ci-cd/images/msc_vessel_1920x1080.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container-merged {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            max-width: calc(100% - 40px);
+            text-align: center;
+            margin-right: 20px;
+        }
+
+        h2 {
+            margin-top: 0;
+            color: #1e88e5;
+        }
+
+        .login-button {
+            width: 100%;
+            background-color: #1e88e5;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            text-align: center;
+            display: inline-block;
+        }
+
+        .login-button:hover {
+            background-color: #0d47a1;
+        }
+    </style>
+</head>
+<body class="background-image">
+    <div class="container-merged">
+        <h2>Shipping Website - Login</h2>
+        <form id="login-form" action="/login" method="post">
+            <!-- Login box from the first code -->
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit" class="login-button">Login</button>
+        </form>
+    </div>
+
+    <!-- JavaScript from the first code -->
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // For demonstration purposes only.
+            // In a real-world application, you should never store passwords in plain text.
+            if (username === 'admin' && password === 'admin') {
+                // Redirect to the user account page
+                window.location.href = 'user_account.html';
+            } else {
+                alert('Invalid username or password.');
+            }
+        });
+    </script>
+</body>
+</html>
