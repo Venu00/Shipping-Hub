@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="th.jpg" type="image/jpg">
+    <title>User Account</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #1e88e5;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>User Account</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Package ID</th>
+                    <th>Sender</th>
+                    <th>Receiver</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>John Doe</td>
+                    <td>Alice Smith</td>
+                    <td>Delivered</td>
+                </tr>
+                <!-- Add more rows for additional packages -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const username = 'testuser';
+            const password = 'testpassword';
+            // Retrieve the login form
+            const loginForm = document.getElementById('login-form');
+
+            // Add submit event listener to the form
+            loginForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                const enteredUsername = document.getElementById('username').value;
+                const enteredPassword = document.getElementById('password').value;
+
+                // For demonstration purposes only.
+                // In a real-world application, you should never store passwords in plain text.
+                if (enteredUsername === 'admin' && enteredPassword === 'admin') {
+                    // Redirect to the user account page
+                    window.location.href = 'user1.html';
+                } else {
+                    alert('Invalid username or password.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
